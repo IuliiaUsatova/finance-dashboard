@@ -10,8 +10,13 @@ const { login, logout } = authStore;
 const router = useRouter();
 const email = ref("");
 const password = ref("");
+const error = ref('')
 
 function handleLogin() {
+    if (email.value === '' || password.value === '') {
+        error.value = 'Заполните поля'
+        return
+    }
     const userData = {
         id: 1,
         name: "Юля",
@@ -32,5 +37,6 @@ function handleLogin() {
             <input type="password" v-model="password" />
         </div>
         <button @click="handleLogin">Войти</button>
+        <p>{{ error }}</p>
     </div>
 </template>

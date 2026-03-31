@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useAuthStore } from "../stores/auth"
+
 import LoginPage from '../pages/LoginPage.vue'
 import DashboardPage from '../pages/DashboardPage.vue'
 import TransactionsPage from '../pages/TransactionsPage.vue'
-import { useAuthStore } from "../stores/auth"
 
 
 const routes = [
