@@ -6,7 +6,7 @@ import { useAuthStore } from "../stores/auth";
 
 const authStore = useAuthStore();
 const { user, isAuthenticated } = storeToRefs(authStore);
-const { login, logout } = authStore;
+const { login } = authStore;
 const router = useRouter();
 const email = ref("");
 const password = ref("");
