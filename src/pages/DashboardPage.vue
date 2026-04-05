@@ -30,5 +30,6 @@ function handleLogout() {
     <h1>Привет {{ user?.name }}</h1>
     <p>Баланс: {{ balance }}</p>
     <button @click="handleLogout">Выйти из кабинета</button>
+    <RouterLink to="transactions">Транзакции</RouterLink>
   </div>
 </template>
